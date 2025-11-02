@@ -29,7 +29,7 @@ services:
     networks: [stack]
 
   api:
-    build: ./01_api
+    build: ./api
     restart: unless-stopped
     environment:
       NODE_ENV: production
@@ -46,7 +46,7 @@ services:
     networks: [stack]
 
   frontend:
-    build: ./02_frontend
+    build: ./frontend
     restart: unless-stopped
     environment:
       - NODE_ENV=production
